@@ -16,14 +16,14 @@
         <div class="data-container">
             <h1>QR Code Generator</h1>
             <p>QR Code allow your users to access your Services Easily and Quickly</p>
-            <h4>Enter Your URL to Generate Your QR Code</h4>
+            <h4>Enter Your URL to Generate QR Code</h4>
             <form id="generate-QR">
                 <input type="url" placeholder="Enter a URL">
                 <select id="size">
                     <option value="100">100x100</option>
                     <option value="200">200x200</option>
-                    <option value="300">300x300</option>
-                    <option value="400" selected>400x400</option>
+                    <option value="300" selected>300x300</option>
+                    <option value="400">400x400</option>
                     <option value="500">500x500</option>
                     <option value="600">600x600</option>
                 </select>
@@ -33,5 +33,12 @@
             <img src="img-qrcode.png" alt="QR code image">
         </div>
     </main>
+    <section id="one">
+        <div id="spinner">
+            <img src="01.gif">
+        </div>
+        <div id="qrcode-generated"></div>
+        <button id="btn">Save Your QR</button>
+    </section>
 </body>
 </html>
