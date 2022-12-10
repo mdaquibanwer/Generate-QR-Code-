@@ -20,8 +20,11 @@ const onSubmitForm = (e)=>{
         loadSpinner();
         setTimeout(() => {
             hideSpinner();
-            generateQRCode(url,size)
-            saveImagebtn();
+            generateQRCode(url,size);
+            setTimeout(() => {
+                const saveURL = QR.querySelector('img').src
+                saveImagebtn(saveURL);
+            }, 50);
         }, 1000);
     }
     // console.log(url,size);
@@ -46,8 +49,10 @@ const generateQRCode = (url,size)=>{
     })
 }
 
-const saveImagebtn = ()=>{
+const saveImagebtn = (saveURL)=>{
     btn.style.display = 'block';
+    btn.href = saveURL;
+    btn.download = "QRCode";
 }
 const hideSaveImagebtn = ()=>{
     btn.style.display = 'none';
