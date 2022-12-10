@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="script.js" defer></script>
     <title>QR Code Generator</title>
 </head>
@@ -18,7 +19,7 @@
             <p>QR Code allow your users to access your Services Easily and Quickly</p>
             <h4>Enter Your URL to Generate QR Code</h4>
             <form id="generate-QR">
-                <input type="url" placeholder="Enter a URL">
+                <input id="url" type="url" placeholder="Enter a URL">
                 <select id="size">
                     <option value="100">100x100</option>
                     <option value="200">200x200</option>
@@ -27,6 +28,7 @@
                     <option value="500">500x500</option>
                     <option value="600">600x600</option>
                 </select>
+                <button id="generate" type="submit">Generate Your QR</button>
             </form>
         </div>
         <div class="img-container">
